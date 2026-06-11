@@ -3,14 +3,14 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 // ⚠️ IMPORTANT: Replace these values with your actual config from the Firebase Console ⚠️
 const firebaseConfig = {
-  apiKey: "AIzaSyBYTTiMhUoZP-J4KmIHS70tZouWT_YahpI",
-  authDomain: "resume-analyzer-950f3.firebaseapp.com",
-  databaseURL: "https://resume-analyzer-950f3-default-rtdb.firebaseio.com",
-  projectId: "resume-analyzer-950f3",
-  storageBucket: "resume-analyzer-950f3.firebasestorage.app",
-  messagingSenderId: "225227746812",
-  appId: "1:225227746812:web:7f6989e504be84e3ef1679",
-  measurementId: "G-46QY22K0Q1"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
